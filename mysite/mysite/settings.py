@@ -136,6 +136,7 @@ INSTALLED_APPS = [
 
     # project
     "mysite",
+    "memepost"
 ]
 
 # A sample logging configuration. The only tangible logging
