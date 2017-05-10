@@ -1,0 +1,9 @@
+
+{% extends "mysite/_account_bar.html" %}
+{% block content %}
+	{% for post in object_list %}
+		<!--<h5>{{ post.date|date:"Y-m-d" }}<a href="/blog/{{post.id}}">  {{ post.title }}</a></h5>-->
+		<img src="{{post.model_pic.path}}" alt="{{post.title}}" height="42" width="42">
+	{% endfor %}
+{% endblock %}
+<h1>It fucking works</h1>
