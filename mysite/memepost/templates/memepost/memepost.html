@@ -1,9 +1,17 @@
+{% extends "site_base.html" %}
 
-{% extends "mysite/_account_bar.html" %}
-{% block content %}
+
+
+{% block body_base %}
+<section class="content">
+
+
 	{% for post in object_list %}
-		<!--<h5>{{ post.date|date:"Y-m-d" }}<a href="/blog/{{post.id}}">  {{ post.title }}</a></h5>-->
-		<img src="{{post.model_pic.path}}" alt="{{post.title}}" height="42" width="42">
+		<div class="picture">
+			<img src="{{post.model_pic.url}}" alt="{{post.title}}" height="300" width="300">
+		</div>
 	{% endfor %}
+
+	
+</section>
 {% endblock %}
-<h1>It fucking works</h1>
