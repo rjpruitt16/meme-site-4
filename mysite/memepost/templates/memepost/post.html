@@ -1,0 +1,17 @@
+{% extends "site_base.html" %}
+
+
+
+{% block body_base %}
+<section class="content">
+
+	<form action="POST" method="">
+		{% csrf_token %}
+		
+		{{ form.as_p }}
+		<p>hellp</p>
+		<input type="submit">
+	</form>
+	
+</section>
+{% endblock %}

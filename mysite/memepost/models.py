@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-
+from django.forms import ModelForm
 from django.db import models
 
 # Create your models here.
@@ -10,3 +10,8 @@ class memepost(models.Model):
     
     def __unicode__(self):
         return self.title
+        
+class memepostForm(ModelForm):
+    class Meta:
+        model = memepost
+        fields = ["title", "model_pic", "date"]

@@ -1,6 +1,7 @@
 from django.conf.urls import url, include
 from django.views.generic import ListView, DetailView
-from memepost.models import memepost
+from memepost.models import memepost, memepostForm
+from . import views
 
 urlpatterns = [ 
                 url(r'^$', ListView.as_view(
@@ -11,4 +12,5 @@ urlpatterns = [
                                     model = memepost,
                                     template_name="memepost/picture.html")),
 
+                url(r'^post/', views.index, name="index")
             ]
