@@ -1,14 +1,21 @@
 {% extends "site_base.html" %}
 
+{% load i18n %}
+
+{% block head_title %}Funnyornot{% endblock %}
+
+{% block body_class %}home{% endblock %}
 
 
 {% block body_base %}
+
 <section class="content">
-	<form method="POST" action="" enctype="multipart/form-data">
-		{% csrf_token %}
-		{{ form.as_p }}
-		<input type="submit">
-	</form>
+      <p> helo </p>
+	  <form method="POST" action="" enctype="multipart/form-data">
+	    {% csrf_token %}
+	    {{ form.as_p }}
+	    <input type="submit">
+	  </form>
 	
 </section>
 {% endblock %}
