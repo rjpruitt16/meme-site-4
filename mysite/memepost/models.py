@@ -5,7 +5,7 @@ from django.db import models
 # Create your models here.
 class memepost(models.Model):
     title = models.CharField(max_length = 140)
-    model_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
+    model_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/no-img.jpg')
     date = models.DateTimeField()
     
     def __unicode__(self):
